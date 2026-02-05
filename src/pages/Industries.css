@@ -1,0 +1,73 @@
+/* === INDUSTRIES PAGE === */
+.industries-page .page-hero {
+    padding-bottom: var(--space-16);
+}
+
+/* === INDUSTRIES LIST === */
+.industries-list {
+    background: var(--color-black);
+}
+
+.industry-block {
+    padding: var(--space-12) 0;
+}
+
+.industry-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-12);
+    margin-bottom: var(--space-6);
+}
+
+.industry-info h2 {
+    margin-bottom: var(--space-3);
+}
+
+.industry-tagline {
+    font-size: var(--text-body-lg);
+    color: var(--color-gray-300);
+    margin-bottom: var(--space-6);
+}
+
+.industry-sectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.industry-stat {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--text-h2);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: var(--tracking-tight);
+}
+
+.stat-label {
+    font-size: var(--text-caption);
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+}
+
+.industry-cta {
+    padding-top: var(--space-4);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .industry-main {
+        flex-direction: column;
+        gap: var(--space-8);
+    }
+
+    .industry-stat {
+        text-align: left;
+    }
+}
