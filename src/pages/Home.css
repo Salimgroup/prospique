@@ -33,6 +33,29 @@
     mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
 }
 
+.hero-abstract-img {
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    max-width: 600px;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-55%) translateX(10px);
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -135,6 +158,32 @@
 .service-card {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: var(--space-6);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-icon {
@@ -146,17 +195,18 @@
     background: var(--color-accent-dim);
     border-radius: var(--radius-md);
     color: var(--color-accent);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
 }
 
 .service-card h3 {
     font-size: var(--text-h4);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
 .service-card p {
     flex: 1;
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
+    font-size: var(--text-body-sm);
 }
 
 /* === INDUSTRIES === */
@@ -209,11 +259,38 @@
 .insight-card {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    padding: 0;
+    overflow: hidden;
+}
+
+.insight-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.insight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.insight-card:hover .insight-image img {
+    transform: scale(1.05);
+}
+
+.insight-content {
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex: 1;
 }
 
 .insight-card h3 {
-    font-size: var(--text-h4);
+    font-size: var(--text-body);
+    font-weight: 600;
     line-height: var(--leading-snug);
 }
 
@@ -233,11 +310,36 @@
 .case-card {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    padding: 0;
+    overflow: hidden;
+}
+
+.case-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.case-card:hover .case-image img {
+    transform: scale(1.05);
+}
+
+.case-content {
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
 }
 
 .case-outcome {
-    font-size: var(--text-h3);
+    font-size: var(--text-h4);
     font-weight: 600;
     color: var(--color-accent);
 }
@@ -312,20 +414,47 @@
 }
 
 .cta-block {
-    text-align: center;
-    padding: var(--space-20) 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-20);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
 }
 
-.cta-block h2 {
+.cta-abstract {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 300px;
+    opacity: 0.4;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-content h2 {
     margin-bottom: var(--space-4);
 }
 
-.cta-block p {
+.cta-content p {
     margin-bottom: var(--space-8);
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
+    .hero-abstract-img {
+        display: none;
+    }
+
     .industries-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -336,6 +465,10 @@
 
     .beliefs-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-abstract {
+        display: none;
     }
 }
 
@@ -367,5 +500,9 @@
     .section-header-row {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .cta-block {
+        padding: var(--space-12);
     }
 }

@@ -108,7 +108,9 @@ const About = () => {
                     <div className="grid grid-4 leadership-grid">
                         {leadership.map((leader, i) => (
                             <div key={i} className="leader-card">
-                                <div className="leader-photo"></div>
+                                <div className="leader-photo">
+                                    <img src="/images/about-abstract.png" alt={leader.name} />
+                                </div>
                                 <h4>{leader.name}</h4>
                                 <p>{leader.role}</p>
                             </div>

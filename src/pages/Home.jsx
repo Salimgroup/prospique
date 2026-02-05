@@ -4,12 +4,12 @@ import './Home.css';
 
 const Home = () => {
     const services = [
-        { icon: TrendingUp, title: 'Strategy & Growth', desc: 'Chart the path from vision to value creation.' },
-        { icon: Cpu, title: 'Technology & Data', desc: 'Engineer intelligent systems for competitive advantage.' },
-        { icon: Users, title: 'Human Capital', desc: 'Unlock the full potential of your workforce.' },
-        { icon: BarChart3, title: 'Operations', desc: 'Optimize performance across the value chain.' },
-        { icon: Globe, title: 'Sustainability', desc: 'Build resilient, responsible enterprises.' },
-        { icon: Zap, title: 'Innovation', desc: 'Accelerate breakthrough ideas to market.' },
+        { icon: TrendingUp, title: 'Strategy & Growth', desc: 'Chart the path from vision to value creation.', image: '/images/strategy-abstract.png' },
+        { icon: Cpu, title: 'Technology & Data', desc: 'Engineer intelligent systems for competitive advantage.', image: '/images/technology-abstract.png' },
+        { icon: Users, title: 'Human Capital', desc: 'Unlock the full potential of your workforce.', image: '/images/about-abstract.png' },
+        { icon: BarChart3, title: 'Operations', desc: 'Optimize performance across the value chain.', image: '/images/operations-abstract.png' },
+        { icon: Globe, title: 'Sustainability', desc: 'Build resilient, responsible enterprises.', image: '/images/innovation-abstract.png' },
+        { icon: Zap, title: 'Innovation', desc: 'Accelerate breakthrough ideas to market.', image: '/images/insights-featured.png' },
     ];
 
     const industries = [
@@ -18,15 +18,15 @@ const Home = () => {
     ];
 
     const insights = [
-        { tag: 'AI', title: 'The Generative Enterprise: Beyond Automation', date: 'Feb 2026', read: '8 min' },
-        { tag: 'Strategy', title: 'Resilience as Competitive Advantage', date: 'Jan 2026', read: '5 min' },
-        { tag: 'Digital', title: 'Cloud-Native: The New Operating Model', date: 'Jan 2026', read: '6 min' },
+        { tag: 'AI', title: 'The Generative Enterprise: Beyond Automation', date: 'Feb 2026', read: '8 min', image: '/images/insights-featured.png' },
+        { tag: 'Strategy', title: 'Resilience as Competitive Advantage', date: 'Jan 2026', read: '5 min', image: '/images/strategy-abstract.png' },
+        { tag: 'Digital', title: 'Cloud-Native: The New Operating Model', date: 'Jan 2026', read: '6 min', image: '/images/technology-abstract.png' },
     ];
 
     const caseStudies = [
-        { client: 'Global Bank', outcome: '40% faster decisions', industry: 'Financial Services' },
-        { client: 'Healthcare Leader', outcome: '$2.1B value unlocked', industry: 'Healthcare' },
-        { client: 'Energy Major', outcome: '60% emissions reduced', industry: 'Energy' },
+        { client: 'Global Bank', outcome: '40% faster decisions', industry: 'Financial Services', image: '/images/technology-abstract.png' },
+        { client: 'Healthcare Leader', outcome: '$2.1B value unlocked', industry: 'Healthcare', image: '/images/innovation-abstract.png' },
+        { client: 'Energy Major', outcome: '60% emissions reduced', industry: 'Energy', image: '/images/operations-abstract.png' },
     ];
 
     const beliefs = [
@@ -43,6 +43,7 @@ const Home = () => {
                 <div className="hero-bg">
                     <div className="hero-gradient"></div>
                     <div className="hero-mesh"></div>
+                    <img src="/images/hero-abstract.png" alt="" className="hero-abstract-img" />
                 </div>
                 <div className="container hero-content">
                     <span className="overline animate-fade-in">The Future of Enterprise</span>
@@ -90,12 +91,17 @@ const Home = () => {
                     <div className="grid grid-3 stagger">
                         {services.map((service, i) => (
                             <div key={i} className="card service-card animate-fade-in-up">
-                                <div className="service-icon">
-                                    <service.icon size={24} strokeWidth={1.5} />
+                                <div className="service-image">
+                                    <img src={service.image} alt={service.title} />
                                 </div>
-                                <h3>{service.title}</h3>
-                                <p>{service.desc}</p>
-                                <Link to="/services" className="btn-ghost">Learn more</Link>
+                                <div className="service-content">
+                                    <div className="service-icon">
+                                        <service.icon size={24} strokeWidth={1.5} />
+                                    </div>
+                                    <h3>{service.title}</h3>
+                                    <p>{service.desc}</p>
+                                    <Link to="/services" className="btn-ghost">Learn more</Link>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -133,12 +139,17 @@ const Home = () => {
                     <div className="grid grid-3 stagger">
                         {insights.map((insight, i) => (
                             <article key={i} className="card insight-card animate-fade-in-up">
-                                <span className="tag">{insight.tag}</span>
-                                <h3>{insight.title}</h3>
-                                <div className="insight-meta">
-                                    <span>{insight.date}</span>
-                                    <span>·</span>
-                                    <span>{insight.read} read</span>
+                                <div className="insight-image">
+                                    <img src={insight.image} alt={insight.title} />
+                                </div>
+                                <div className="insight-content">
+                                    <span className="tag">{insight.tag}</span>
+                                    <h3>{insight.title}</h3>
+                                    <div className="insight-meta">
+                                        <span>{insight.date}</span>
+                                        <span>·</span>
+                                        <span>{insight.read} read</span>
+                                    </div>
                                 </div>
                             </article>
                         ))}
@@ -159,9 +170,14 @@ const Home = () => {
                     <div className="grid grid-3 stagger">
                         {caseStudies.map((study, i) => (
                             <div key={i} className="card case-card animate-fade-in-up">
-                                <span className="tag-outline">{study.industry}</span>
-                                <div className="case-outcome">{study.outcome}</div>
-                                <p className="case-client">{study.client}</p>
+                                <div className="case-image">
+                                    <img src={study.image} alt={study.client} />
+                                </div>
+                                <div className="case-content">
+                                    <span className="tag-outline">{study.industry}</span>
+                                    <div className="case-outcome">{study.outcome}</div>
+                                    <p className="case-client">{study.client}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -200,11 +216,14 @@ const Home = () => {
             <section className="section-lg cta-section">
                 <div className="container">
                     <div className="cta-block">
-                        <h2>Ready to move?</h2>
-                        <p className="text-lg">Let's build something that matters.</p>
-                        <Link to="/contact" className="btn btn-primary btn-lg">
-                            Start the Conversation
-                        </Link>
+                        <img src="/images/innovation-abstract.png" alt="" className="cta-abstract" />
+                        <div className="cta-content">
+                            <h2>Ready to move?</h2>
+                            <p className="text-lg">Let's build something that matters.</p>
+                            <Link to="/contact" className="btn btn-primary btn-lg">
+                                Start the Conversation
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

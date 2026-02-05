@@ -51,7 +51,7 @@ const Insights = () => {
                             </div>
                         </div>
                         <div className="featured-visual">
-                            <div className="visual-placeholder"></div>
+                            <img src="/images/insights-featured.png" alt="AI Abstract" className="featured-img" />
                         </div>
                     </Link>
                 </div>

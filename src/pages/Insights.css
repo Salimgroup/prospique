@@ -46,20 +46,16 @@
     justify-content: center;
 }
 
-.visual-placeholder {
+.featured-img {
     width: 100%;
-    aspect-ratio: 16/10;
-    background: linear-gradient(135deg, var(--color-gray-800), var(--color-gray-700));
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: var(--radius-lg);
-    position: relative;
-    overflow: hidden;
+    transition: transform var(--duration-slow) var(--ease-out);
 }
 
-.visual-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+.featured-card:hover .featured-img {
+    transform: scale(1.03);
 }
 
 /* === FILTERS === */
