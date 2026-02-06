@@ -13,7 +13,7 @@
 }
 
 .contact-hero .hero-subtitle {
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
 }
 
 .contact-hero .hero-visual {
@@ -41,7 +41,7 @@
 
 /* === CONTACT SECTION === */
 .contact-section {
-    background: var(--color-white);
+    background: var(--color-gray-900);
 }
 
 .contact-grid {
@@ -56,7 +56,7 @@
 }
 
 .form-intro p {
-    color: var(--text-muted);
+    color: var(--color-gray-400);
     margin-bottom: var(--space-8);
 }
 
@@ -68,7 +68,7 @@
     width: 100%;
     max-width: 320px;
     border-radius: var(--radius-lg);
-    opacity: 0.9;
+    opacity: 0.8;
     transition: all var(--duration-slow) var(--ease-out);
 }
 
@@ -83,10 +83,9 @@
     flex-direction: column;
     gap: var(--space-5);
     padding: var(--space-10);
-    background: var(--color-gray-900);
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
 }
 
 .form-group {
@@ -98,17 +97,17 @@
 .form-group label {
     font-size: var(--text-body-sm);
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     padding: var(--space-4);
-    background: var(--color-white);
+    background: var(--color-gray-800);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-md);
-    color: var(--text-primary);
+    color: var(--color-white);
     font-size: var(--text-body);
     font-family: inherit;
     transition: border-color var(--duration-fast) var(--ease-out);
@@ -124,7 +123,7 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--text-muted);
+    color: var(--color-gray-500);
 }
 
 .form-group select {

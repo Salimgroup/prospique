@@ -5,7 +5,7 @@
 
 .services-page .hero-tagline {
     font-size: var(--text-h3);
-    color: var(--text-primary);
+    color: var(--color-gray-200);
     margin-bottom: var(--space-6);
 }
 
@@ -14,12 +14,12 @@
 }
 
 .services-page .hero-text {
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 /* === SERVICES LIST === */
 .services-list-section {
-    background: var(--color-white);
+    background: var(--color-gray-900);
 }
 
 .service-block {
@@ -45,7 +45,6 @@
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
 }
 
 .service-content h2 {
@@ -62,14 +61,14 @@
 
 .service-summary {
     font-size: var(--text-body-lg);
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
     margin-bottom: var(--space-8);
 }
 
 .focus-areas h4 {
     font-size: var(--text-body);
     margin-bottom: var(--space-4);
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
 }
 
 .focus-areas ul {
@@ -83,7 +82,7 @@
 .focus-areas li {
     position: relative;
     padding-left: var(--space-6);
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 .focus-areas li::before {
@@ -98,31 +97,24 @@
 
 /* === CTA === */
 .services-page .cta-section {
-    background: var(--color-gray-900);
+    background: var(--color-black);
 }
 
 .services-page .cta-block {
     padding: var(--space-16);
-    background: var(--color-accent);
-    border: none;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
     text-align: center;
 }
 
 .services-page .cta-content h2 {
     margin-bottom: var(--space-4);
-    color: var(--color-white);
 }
 
 .services-page .cta-content p {
     max-width: 600px;
     margin: 0 auto var(--space-8);
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.services-page .cta-content .btn-primary {
-    background: var(--color-white);
-    color: var(--color-accent);
 }
 
 /* === RESPONSIVE === */

@@ -42,7 +42,7 @@ const Contact = () => {
                         </p>
                     </div>
                     <div className="hero-visual">
-                        <img src="/images/corporate-2.png" alt="Strategy Network" className="hero-img" />
+                        <img src="/images/blue-abstract-2.png" alt="Strategy Network" className="hero-img" />
                     </div>
                 </div>
             </section>
@@ -57,7 +57,7 @@ const Contact = () => {
                                 Every organization's goals are unique—and so is the way we work with you. Whether you're seeking operational efficiency, strategic alignment, or technology-driven transformation, our team will connect you with the right experts to understand your challenges and chart a path toward measurable results.
                             </p>
                             <div className="contact-visual">
-                                <img src="/images/corporate-1.png" alt="Abstract" />
+                                <img src="/images/blue-abstract-1.png" alt="Abstract" />
                             </div>
                         </div>
                         <form className="contact-form" onSubmit={handleSubmit}>

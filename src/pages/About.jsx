@@ -26,7 +26,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="hero-visual">
-                        <img src="/images/corporate-4.png" alt="Vision" className="hero-img" />
+                        <img src="/images/blue-abstract-4.png" alt="Vision" className="hero-img" />
                     </div>
                 </div>
             </section>
@@ -36,7 +36,7 @@ const About = () => {
                 <div className="container">
                     <div className="section-content-grid">
                         <div className="section-visual">
-                            <img src="/images/corporate-1.png" alt="Abstract" />
+                            <img src="/images/blue-abstract-1.png" alt="Abstract" />
                         </div>
                         <div className="section-text">
                             <h2>Who We Are</h2>
@@ -83,7 +83,7 @@ const About = () => {
                             </p>
                         </div>
                         <div className="section-visual">
-                            <img src="/images/corporate-2.png" alt="Strategy Network" />
+                            <img src="/images/blue-abstract-2.png" alt="Strategy Network" />
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ const About = () => {
                 <div className="container">
                     <div className="serve-content">
                         <div className="serve-visual">
-                            <img src="/images/corporate-3.png" alt="Unity and Growth" />
+                            <img src="/images/blue-abstract-3.png" alt="Innovation" />
                         </div>
                         <div className="serve-text">
                             <h2>Who We Serve</h2>

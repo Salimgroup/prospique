@@ -1,39 +1,39 @@
 /* ==========================================
    PROSPIQUE ENTERPRISE DESIGN SYSTEM
-   Light Grey / White / Neutrals + Electric Blue
+   Black / White / Neutrals + Electric Blue
    ========================================== */
 
 :root {
   /* === COLORS === */
-  /* Primary Palette - Light Neutral Theme */
-  --color-black: #1A1A1A;
+  /* Primary Palette - Black/White/Neutral Theme */
+  --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-gray-900: #F8F9FA;
-  --color-gray-800: #F1F3F5;
-  --color-gray-700: #E9ECEF;
-  --color-gray-600: #DEE2E6;
-  --color-gray-500: #CED4DA;
-  --color-gray-400: #ADB5BD;
-  --color-gray-300: #868E96;
-  --color-gray-200: #495057;
-  --color-gray-100: #343A40;
-  --color-gray-50: #212529;
+  --color-gray-900: #0A0A0A;
+  --color-gray-800: #141414;
+  --color-gray-700: #1F1F1F;
+  --color-gray-600: #2A2A2A;
+  --color-gray-500: #3D3D3D;
+  --color-gray-400: #666666;
+  --color-gray-300: #999999;
+  --color-gray-200: #CCCCCC;
+  --color-gray-100: #E5E5E5;
+  --color-gray-50: #F5F5F5;
 
-  /* Accent - Electric Blue (used sparingly) */
+  /* Accent - Electric Blue */
   --color-accent: #0066FF;
-  --color-accent-dim: rgba(0, 102, 255, 0.1);
-  --color-accent-hover: #0052CC;
-  --color-accent-light: #E6F0FF;
+  --color-accent-dim: rgba(0, 102, 255, 0.15);
+  --color-accent-hover: #3385FF;
+  --color-accent-light: rgba(0, 102, 255, 0.1);
 
-  /* Glass/Chrome effects - for light backgrounds */
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(0, 0, 0, 0.08);
-  --glass-highlight: rgba(0, 0, 0, 0.04);
+  /* Glass/Chrome effects - for dark backgrounds */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
 
   /* Text colors */
-  --text-primary: #1A1A1A;
-  --text-secondary: #495057;
-  --text-muted: #868E96;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-muted: #999999;
 
   /* === TYPOGRAPHY === */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -126,7 +126,7 @@ body {
   font-size: var(--text-body);
   line-height: var(--leading-normal);
   color: var(--text-primary);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   overflow-x: hidden;
 }
 
@@ -226,7 +226,7 @@ a {
 .page-hero {
   padding-top: 160px;
   padding-bottom: var(--space-16);
-  background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-white) 100%);
+  background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-black) 100%);
 }
 
 /* Grid System */

@@ -38,7 +38,7 @@ const Home = () => {
                 <div className="hero-bg">
                     <div className="hero-gradient"></div>
                     <div className="hero-mesh"></div>
-                    <img src="/images/hero-abstract.png" alt="" className="hero-abstract-img" />
+                    <img src="/images/blue-abstract-4.png" alt="" className="hero-abstract-img" />
                 </div>
                 <div className="container hero-content">
                     <h1 className="display text-balance animate-fade-in-up">

@@ -6,7 +6,7 @@
     position: relative;
     padding-top: 80px;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-white) 100%);
+    background: var(--color-black);
 }
 
 .hero-bg {
@@ -19,17 +19,17 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 102, 255, 0.05) 0%, transparent 40%),
-        radial-gradient(ellipse 50% 50% at 0% 80%, rgba(0, 102, 255, 0.03) 0%, transparent 40%);
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 102, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse 50% 50% at 0% 80%, rgba(0, 102, 255, 0.05) 0%, transparent 40%);
 }
 
 .hero-mesh {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
 }
@@ -65,13 +65,13 @@
 
 .hero .display {
     margin-bottom: var(--space-8);
-    color: var(--text-primary);
+    color: var(--color-white);
 }
 
 .hero-subtitle {
     max-width: 700px;
     margin-bottom: var(--space-10);
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
 }
 
 .hero-ctas {
@@ -82,7 +82,7 @@
 
 /* === WHO WE ARE === */
 .who-section {
-    background: var(--color-white);
+    background: var(--color-gray-900);
 }
 
 .who-content {
@@ -99,7 +99,7 @@
 
 /* === SERVICES === */
 .services-section {
-    background: var(--color-gray-900);
+    background: var(--color-black);
 }
 
 .services-list {
@@ -117,15 +117,15 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--space-6) var(--space-8);
-    background: var(--color-white);
-    color: var(--text-primary);
+    background: var(--color-gray-900);
+    color: var(--color-gray-200);
     font-size: var(--text-h4);
     font-weight: 500;
     transition: all var(--duration-normal) var(--ease-out);
 }
 
 .service-item:hover {
-    background: var(--color-accent-light);
+    background: var(--color-gray-800);
     color: var(--color-accent);
 }
 
@@ -143,13 +143,13 @@
 
 /* === INDUSTRIES === */
 .industries-section {
-    background: var(--color-white);
+    background: var(--color-gray-900);
 }
 
 .industries-intro {
     max-width: 800px;
     margin-bottom: var(--space-12);
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
 }
 
 .industries-grid {
@@ -160,10 +160,10 @@
 
 .industry-tile {
     padding: var(--space-3) var(--space-6);
-    background: var(--color-gray-900);
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-full);
-    color: var(--text-secondary);
+    color: var(--color-gray-300);
     font-size: var(--text-body-sm);
     transition: all var(--duration-fast) var(--ease-out);
 }
@@ -176,7 +176,7 @@
 
 /* === PERSPECTIVE === */
 .perspective-section {
-    background: var(--color-gray-900);
+    background: var(--color-black);
 }
 
 .perspective-content {
@@ -191,12 +191,12 @@
 
 .perspective-tagline {
     font-size: var(--text-h3);
-    color: var(--text-primary);
+    color: var(--color-gray-200);
     margin-bottom: var(--space-6);
 }
 
 .perspective-intro {
-    color: var(--text-secondary);
+    color: var(--color-gray-400);
     margin-bottom: var(--space-12);
 }
 
@@ -209,10 +209,9 @@
 
 .perspective-item {
     padding: var(--space-6);
-    background: var(--color-white);
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
 }
 
 .perspective-item h4 {
@@ -222,12 +221,12 @@
 
 .perspective-item p {
     font-size: var(--text-body-sm);
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 /* === WHY SECTION === */
 .why-section {
-    background: var(--color-white);
+    background: var(--color-gray-900);
 }
 
 .why-content {
@@ -242,12 +241,12 @@
 
 .why-tagline {
     font-size: var(--text-h3);
-    color: var(--text-primary);
+    color: var(--color-gray-200);
     margin-bottom: var(--space-6);
 }
 
 .why-intro {
-    color: var(--text-secondary);
+    color: var(--color-gray-400);
     margin-bottom: var(--space-12);
 }
 
@@ -261,8 +260,6 @@
 .why-item {
     padding: var(--space-6);
     border-left: 3px solid var(--color-accent);
-    background: var(--color-gray-900);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
 
 .why-item h4 {
@@ -271,12 +268,12 @@
 
 .why-item p {
     font-size: var(--text-body-sm);
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 /* === CTA === */
 .cta-section {
-    background: var(--color-gray-900);
+    background: var(--color-black);
 }
 
 .cta-block {
@@ -285,7 +282,8 @@
     align-items: center;
     justify-content: center;
     padding: var(--space-20);
-    background: var(--color-accent);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
     overflow: hidden;
 }
@@ -297,7 +295,7 @@
     transform: translateY(-50%);
     width: 40%;
     max-width: 300px;
-    opacity: 0.2;
+    opacity: 0.6;
 }
 
 .cta-content {
@@ -308,21 +306,10 @@
 
 .cta-content h2 {
     margin-bottom: var(--space-4);
-    color: var(--color-white);
 }
 
 .cta-content p {
     margin-bottom: var(--space-8);
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.cta-content .btn-primary {
-    background: var(--color-white);
-    color: var(--color-accent);
-}
-
-.cta-content .btn-primary:hover {
-    background: var(--color-gray-100);
 }
 
 /* === SECTION HEADERS === */
@@ -335,7 +322,7 @@
 }
 
 .section-header p {
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 /* === RESPONSIVE === */

@@ -1,5 +1,5 @@
 .footer {
-    background: var(--color-gray-800);
+    background: var(--color-gray-900);
     border-top: 1px solid var(--glass-border);
     padding: var(--space-20) 0 var(--space-10);
 }
@@ -16,11 +16,10 @@
 .newsletter-content h3 {
     font-size: var(--text-h3);
     margin-bottom: var(--space-2);
-    color: var(--text-primary);
 }
 
 .newsletter-content p {
-    color: var(--text-muted);
+    color: var(--color-gray-400);
 }
 
 .newsletter-form {
@@ -31,16 +30,16 @@
 
 .newsletter-form input {
     padding: var(--space-4) var(--space-6);
-    background: var(--color-white);
+    background: var(--color-gray-800);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-full);
-    color: var(--text-primary);
+    color: var(--color-white);
     font-size: var(--text-body-sm);
     width: 280px;
 }
 
 .newsletter-form input::placeholder {
-    color: var(--text-muted);
+    color: var(--color-gray-500);
 }
 
 .newsletter-form input:focus {
@@ -60,7 +59,7 @@
 .footer-col h4 {
     font-size: var(--text-body-sm);
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--color-white);
     margin-bottom: var(--space-6);
 }
 
@@ -74,7 +73,7 @@
 
 .footer-col a {
     font-size: var(--text-body-sm);
-    color: var(--text-muted);
+    color: var(--color-gray-400);
     transition: color var(--duration-fast) var(--ease-out);
 }
 
@@ -95,7 +94,7 @@
 .footer-logo {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--color-white);
     display: flex;
     align-items: center;
     gap: var(--space-2);
@@ -113,7 +112,7 @@
 
 .footer-locations span {
     font-size: var(--text-caption);
-    color: var(--text-muted);
+    color: var(--color-gray-500);
 }
 
 .footer-locations span:not(:last-child)::after {
@@ -132,21 +131,20 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--color-white);
+    background: var(--color-gray-800);
     border-radius: var(--radius-full);
-    color: var(--text-muted);
+    color: var(--color-gray-400);
     transition: all var(--duration-fast) var(--ease-out);
-    box-shadow: var(--shadow-sm);
 }
 
 .footer-social a:hover {
     background: var(--color-accent);
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .footer-copyright {
     font-size: var(--text-caption);
-    color: var(--text-muted);
+    color: var(--color-gray-500);
     width: 100%;
     text-align: center;
     margin-top: var(--space-6);
