@@ -216,6 +216,13 @@ a {
   padding: var(--section-gap) 0;
 }
 
+/* Page Hero - for inner pages */
+.page-hero {
+  padding-top: 160px;
+  padding-bottom: var(--space-16);
+  background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-black) 100%);
+}
+
 /* Grid System */
 .grid {
   display: grid;

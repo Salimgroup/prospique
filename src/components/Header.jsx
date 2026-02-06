@@ -35,15 +35,17 @@ const Header = () => {
           prospique
         </Link>
         <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <div className="nav-list">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </nav>
         <div className="header-actions">
           <Link to="/contact" className="btn btn-primary">Let's Talk</Link>

@@ -1,6 +1,42 @@
 /* === CONTACT PAGE === */
-.contact-page .page-hero {
-    padding-bottom: var(--space-8);
+
+/* Hero Grid Layout */
+.contact-hero .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.contact-hero .hero-content h1 {
+    margin-bottom: var(--space-6);
+}
+
+.contact-hero .hero-subtitle {
+    color: var(--color-gray-300);
+}
+
+.contact-hero .hero-visual {
+    position: relative;
+}
+
+.contact-hero .hero-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: var(--radius-lg);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 /* === CONTACT SECTION === */
@@ -10,7 +46,7 @@
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: var(--space-16);
     align-items: start;
 }
@@ -21,13 +57,35 @@
 
 .form-intro p {
     color: var(--color-gray-400);
+    margin-bottom: var(--space-8);
+}
+
+.contact-visual {
+    margin-top: var(--space-8);
+}
+
+.contact-visual img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: var(--radius-lg);
+    opacity: 0.8;
+    transition: all var(--duration-slow) var(--ease-out);
+}
+
+.contact-visual img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
 
 /* === CONTACT FORM === */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-5);
+    padding: var(--space-10);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
 }
 
 .form-group {
@@ -74,7 +132,7 @@
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
+    gap: var(--space-5);
 }
 
 .contact-form .btn {
@@ -84,13 +142,32 @@
 
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
+
+    .contact-hero .hero-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-hero .hero-visual {
+        order: -1;
+        text-align: center;
+    }
+
+    .contact-hero .hero-img {
+        max-width: 280px;
+    }
+
+    .contact-visual {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: var(--space-6);
     }
 }

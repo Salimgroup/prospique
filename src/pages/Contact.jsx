@@ -33,12 +33,17 @@ const Contact = () => {
     return (
         <main id="main-content" className="contact-page">
             {/* Hero */}
-            <section className="page-hero">
-                <div className="container">
-                    <h1 className="text-balance">Let's Shape What's Next Together</h1>
-                    <p className="hero-subtitle text-lg">
-                        Progress begins with a conversation. Whether you're optimizing operations, evolving your workforce, or embracing digital transformation, Prospique helps you move forward with clarity and confidence.
-                    </p>
+            <section className="page-hero contact-hero">
+                <div className="container hero-grid">
+                    <div className="hero-content">
+                        <h1 className="text-balance">Let's Shape What's Next Together</h1>
+                        <p className="hero-subtitle text-lg">
+                            Progress begins with a conversation. Whether you're optimizing operations, evolving your workforce, or embracing digital transformation, Prospique helps you move forward with clarity and confidence.
+                        </p>
+                    </div>
+                    <div className="hero-visual">
+                        <img src="/images/corporate-2.png" alt="Strategy Network" className="hero-img" />
+                    </div>
                 </div>
             </section>
 
@@ -51,6 +56,9 @@ const Contact = () => {
                             <p className="text-lg">
                                 Every organization's goals are unique—and so is the way we work with you. Whether you're seeking operational efficiency, strategic alignment, or technology-driven transformation, our team will connect you with the right experts to understand your challenges and chart a path toward measurable results.
                             </p>
+                            <div className="contact-visual">
+                                <img src="/images/corporate-1.png" alt="Abstract" />
+                            </div>
                         </div>
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="form-group">
