@@ -20,7 +20,7 @@
 }
 
 .about-hero .hero-text {
-    color: var(--color-gray-400);
+    color: var(--text-muted);
 }
 
 .hero-visual {
@@ -78,17 +78,17 @@
 }
 
 .section-text p.text-lg {
-    color: var(--color-gray-200);
+    color: var(--text-primary);
 }
 
 /* === WHO SECTION === */
 .about-page .who-section {
-    background: var(--color-gray-900);
+    background: var(--color-white);
 }
 
 /* === MISSION === */
 .mission-section {
-    background: var(--color-black);
+    background: var(--color-gray-900);
 }
 
 .mission-block {
@@ -96,9 +96,10 @@
     margin: 0 auto;
     text-align: center;
     padding: var(--space-12);
-    background: var(--glass-bg);
+    background: var(--color-white);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
 }
 
 .mission-block h2 {
@@ -106,17 +107,17 @@
 }
 
 .mission-text {
-    color: var(--color-gray-200);
+    color: var(--text-secondary);
 }
 
 /* === APPROACH === */
 .approach-section {
-    background: var(--color-gray-900);
+    background: var(--color-white);
 }
 
 /* === VALUES === */
 .values-section {
-    background: var(--color-black);
+    background: var(--color-gray-900);
 }
 
 .section-header.centered {
@@ -132,16 +133,18 @@
 
 .value-card {
     padding: var(--space-6);
-    background: var(--glass-bg);
+    background: var(--color-white);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     text-align: center;
     transition: all var(--duration-normal) var(--ease-out);
+    box-shadow: var(--shadow-sm);
 }
 
 .value-card:hover {
     border-color: var(--color-accent);
     transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .value-card h3 {
@@ -152,12 +155,12 @@
 
 .value-card p {
     font-size: var(--text-body-sm);
-    color: var(--color-gray-400);
+    color: var(--text-muted);
 }
 
 /* === SERVE === */
 .serve-section {
-    background: var(--color-gray-900);
+    background: var(--color-white);
 }
 
 .serve-content {
@@ -179,14 +182,14 @@
 
 /* === CTA === */
 .about-page .cta-section {
-    background: var(--color-black);
+    background: var(--color-gray-900);
 }
 
 .about-page .cta-block {
     position: relative;
     padding: var(--space-16);
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: var(--color-accent);
+    border: none;
     border-radius: var(--radius-xl);
     text-align: center;
     overflow: hidden;
@@ -199,7 +202,7 @@
     transform: translateY(-50%);
     width: 35%;
     max-width: 300px;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 .about-page .cta-content {
@@ -209,11 +212,18 @@
 
 .about-page .cta-content h2 {
     margin-bottom: var(--space-4);
+    color: var(--color-white);
 }
 
 .about-page .cta-content p {
     max-width: 600px;
     margin: 0 auto var(--space-8);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-page .cta-content .btn-primary {
+    background: var(--color-white);
+    color: var(--color-accent);
 }
 
 /* === RESPONSIVE === */

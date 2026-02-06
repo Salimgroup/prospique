@@ -6,14 +6,16 @@
     z-index: 1000;
     padding: var(--space-5) 0;
     transition: all var(--duration-normal) var(--ease-out);
+    background: transparent;
 }
 
 .header.scrolled {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: var(--space-4) 0;
     border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
 }
 
 .header-container {
@@ -33,7 +35,7 @@
     gap: var(--space-2);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
@@ -57,14 +59,14 @@
 .nav-link {
     font-size: var(--text-body-sm);
     font-weight: 500;
-    color: var(--color-gray-300);
+    color: var(--text-secondary);
     transition: color var(--duration-fast) var(--ease-out);
     position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-white);
+    color: var(--color-accent);
 }
 
 .nav-link.active::after {
@@ -93,22 +95,22 @@
     background: transparent;
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-full);
-    color: var(--color-gray-300);
+    color: var(--text-secondary);
     cursor: pointer;
     transition: all var(--duration-fast) var(--ease-out);
 }
 
 .search-btn:hover {
-    background: var(--glass-bg);
-    color: var(--color-white);
-    border-color: var(--glass-highlight);
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .mobile-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--color-white);
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -120,7 +122,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--color-black);
+        background: var(--color-white);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -142,6 +144,7 @@
 
     .nav-link {
         font-size: var(--text-h3);
+        color: var(--text-primary);
     }
 
     .mobile-toggle {

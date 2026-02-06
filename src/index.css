@@ -1,33 +1,39 @@
 /* ==========================================
    PROSPIQUE ENTERPRISE DESIGN SYSTEM
-   Premium Corporate + Futuristic Aesthetic
+   Light Grey / White / Neutrals + Electric Blue
    ========================================== */
 
 :root {
   /* === COLORS === */
-  /* Primary Palette - High Contrast */
-  --color-black: #000000;
+  /* Primary Palette - Light Neutral Theme */
+  --color-black: #1A1A1A;
   --color-white: #FFFFFF;
-  --color-gray-900: #0A0A0A;
-  --color-gray-800: #141414;
-  --color-gray-700: #1F1F1F;
-  --color-gray-600: #2A2A2A;
-  --color-gray-500: #3D3D3D;
-  --color-gray-400: #666666;
-  --color-gray-300: #999999;
-  --color-gray-200: #CCCCCC;
-  --color-gray-100: #E5E5E5;
-  --color-gray-50: #F5F5F5;
+  --color-gray-900: #F8F9FA;
+  --color-gray-800: #F1F3F5;
+  --color-gray-700: #E9ECEF;
+  --color-gray-600: #DEE2E6;
+  --color-gray-500: #CED4DA;
+  --color-gray-400: #ADB5BD;
+  --color-gray-300: #868E96;
+  --color-gray-200: #495057;
+  --color-gray-100: #343A40;
+  --color-gray-50: #212529;
 
-  /* Accent - Vivid Electric Green (used sparingly) */
-  --color-accent: #00FF88;
-  --color-accent-dim: rgba(0, 255, 136, 0.15);
-  --color-accent-hover: #00CC6A;
+  /* Accent - Electric Blue (used sparingly) */
+  --color-accent: #0066FF;
+  --color-accent-dim: rgba(0, 102, 255, 0.1);
+  --color-accent-hover: #0052CC;
+  --color-accent-light: #E6F0FF;
 
-  /* Glass/Chrome effects */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.12);
+  /* Glass/Chrome effects - for light backgrounds */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-highlight: rgba(0, 0, 0, 0.04);
+
+  /* Text colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #495057;
+  --text-muted: #868E96;
 
   /* === TYPOGRAPHY === */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -75,7 +81,7 @@
   --container-max: 1400px;
   --container-narrow: 900px;
   --container-padding: 24px;
-  --section-gap: 160px;
+  --section-gap: 120px;
   --grid-gap: 24px;
 
   /* === BORDERS & RADIUS === */
@@ -94,10 +100,10 @@
   --duration-slow: 400ms;
 
   /* === SHADOWS === */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(0, 255, 136, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 40px rgba(0, 102, 255, 0.2);
 }
 
 /* === RESET & BASE === */
@@ -119,8 +125,8 @@ body {
   font-family: var(--font-family);
   font-size: var(--text-body);
   line-height: var(--leading-normal);
-  color: var(--color-white);
-  background-color: var(--color-black);
+  color: var(--text-primary);
+  background-color: var(--color-white);
   overflow-x: hidden;
 }
 
@@ -134,7 +140,7 @@ h6 {
   font-weight: 600;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--color-white);
+  color: var(--text-primary);
 }
 
 .display {
@@ -164,7 +170,7 @@ h4,
 }
 
 p {
-  color: var(--color-gray-300);
+  color: var(--text-secondary);
   line-height: var(--leading-relaxed);
 }
 
@@ -220,7 +226,7 @@ a {
 .page-hero {
   padding-top: 160px;
   padding-bottom: var(--space-16);
-  background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-black) 100%);
+  background: linear-gradient(180deg, var(--color-gray-900) 0%, var(--color-white) 100%);
 }
 
 /* Grid System */
@@ -371,9 +377,10 @@ a {
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--glass-highlight);
+  background: var(--color-white);
+  border-color: var(--color-accent);
   transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .card:hover::before {
