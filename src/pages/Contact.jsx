@@ -1,198 +1,133 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
+        fullName: '',
         company: '',
-        role: '',
-        service: '',
-        message: '',
-        subscribe: false
+        email: '',
+        phone: '',
+        areaOfInterest: '',
+        message: ''
     });
 
     const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? checked : value
-        }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        alert('Thank you for reaching out. We\'ll be in touch within 24 hours.');
+        // Handle form submission
     };
 
-    const services = [
-        'Strategy & Growth',
-        'Technology & Data',
-        'Human Capital',
-        'Operations Excellence',
-        'Sustainability',
-        'Innovation & Ventures',
-        'Other'
-    ];
-
-    const offices = [
-        { city: 'New York', address: '350 Fifth Avenue, 21st Floor', phone: '+1 (212) 555-0100' },
-        { city: 'London', address: '30 St Mary Axe, Level 12', phone: '+44 20 7946 0958' },
-        { city: 'Singapore', address: 'One Raffles Place, Tower 2', phone: '+65 6808 0500' },
+    const areasOfInterest = [
+        'Core Business Operations',
+        'Enterprise Technology & Performance',
+        'Human Capital Consulting',
+        'Strategy & Analytics',
+        'Customer & Market Strategy',
+        'General Inquiry'
     ];
 
     return (
         <main id="main-content" className="contact-page">
             {/* Hero */}
-            <section className="page-hero contact-hero">
+            <section className="page-hero">
                 <div className="container">
-                    <span className="overline">Get in Touch</span>
-                    <h1 className="text-balance">Let's Start the Conversation</h1>
+                    <h1 className="text-balance">Let's Shape What's Next Together</h1>
                     <p className="hero-subtitle text-lg">
-                        Tell us about your challenge. We'll connect you with the right team.
+                        Progress begins with a conversation. Whether you're optimizing operations, evolving your workforce, or embracing digital transformation, Prospique helps you move forward with clarity and confidence.
                     </p>
                 </div>
             </section>
 
-            {/* Contact Form + Info */}
+            {/* Contact Form */}
             <section className="section-lg contact-section">
                 <div className="container">
                     <div className="contact-grid">
-                        {/* Form */}
-                        <div className="contact-form-wrap">
-                            <form onSubmit={handleSubmit} className="contact-form">
-                                <div className="form-row">
-                                    <div className="form-group">
-                                        <label htmlFor="name">Full Name *</label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="Your name"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email">Work Email *</label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="you@company.com"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="form-row">
-                                    <div className="form-group">
-                                        <label htmlFor="company">Company *</label>
-                                        <input
-                                            type="text"
-                                            id="company"
-                                            name="company"
-                                            value={formData.company}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="Your organization"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="role">Your Role</label>
-                                        <input
-                                            type="text"
-                                            id="role"
-                                            name="role"
-                                            value={formData.role}
-                                            onChange={handleChange}
-                                            placeholder="e.g., CEO, VP Strategy"
-                                        />
-                                    </div>
-                                </div>
-
+                        <div className="form-intro">
+                            <h2>Start the Conversation</h2>
+                            <p className="text-lg">
+                                Every organization's goals are unique—and so is the way we work with you. Whether you're seeking operational efficiency, strategic alignment, or technology-driven transformation, our team will connect you with the right experts to understand your challenges and chart a path toward measurable results.
+                            </p>
+                        </div>
+                        <form className="contact-form" onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label htmlFor="fullName">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="company">Company / Organization</label>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                            <div className="form-row">
                                 <div className="form-group">
-                                    <label htmlFor="service">Area of Interest</label>
-                                    <select
-                                        id="service"
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleChange}
-                                    >
-                                        <option value="">Select a service area...</option>
-                                        {services.map((svc, i) => (
-                                            <option key={i} value={svc}>{svc}</option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div className="form-group">
-                                    <label htmlFor="message">How Can We Help? *</label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
+                                    <label htmlFor="email">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        rows={5}
-                                        placeholder="Tell us about your challenge or opportunity..."
                                     />
                                 </div>
-
-                                <div className="form-group checkbox-group">
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            name="subscribe"
-                                            checked={formData.subscribe}
-                                            onChange={handleChange}
-                                        />
-                                        <span>I'd like to receive insights and updates from Prospique.</span>
-                                    </label>
-                                </div>
-
-                                <button type="submit" className="btn btn-primary btn-lg submit-btn">
-                                    Send Message <ArrowRight size={18} />
-                                </button>
-                            </form>
-                        </div>
-
-                        {/* Info */}
-                        <div className="contact-info">
-                            <div className="info-block">
-                                <h3>General Inquiries</h3>
-                                <div className="contact-item">
-                                    <Mail size={18} />
-                                    <a href="mailto:hello@prospique.com">hello@prospique.com</a>
-                                </div>
-                                <div className="contact-item">
-                                    <Phone size={18} />
-                                    <a href="tel:+12125550100">+1 (212) 555-0100</a>
+                                <div className="form-group">
+                                    <label htmlFor="phone">Phone</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                    />
                                 </div>
                             </div>
-
-                            <div className="offices">
-                                <h3>Our Offices</h3>
-                                {offices.map((office, i) => (
-                                    <div key={i} className="office-item">
-                                        <h4>{office.city}</h4>
-                                        <div className="office-detail">
-                                            <MapPin size={14} />
-                                            <span>{office.address}</span>
-                                        </div>
-                                        <div className="office-detail">
-                                            <Phone size={14} />
-                                            <span>{office.phone}</span>
-                                        </div>
-                                    </div>
-                                ))}
+                            <div className="form-group">
+                                <label htmlFor="areaOfInterest">Area of Interest</label>
+                                <select
+                                    id="areaOfInterest"
+                                    name="areaOfInterest"
+                                    value={formData.areaOfInterest}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Select an area</option>
+                                    {areasOfInterest.map((area, i) => (
+                                        <option key={i} value={area}>{area}</option>
+                                    ))}
+                                </select>
                             </div>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="message">Message / Details</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Tell us about your organization and how we can help..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-lg">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

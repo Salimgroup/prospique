@@ -1,57 +1,79 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Cpu, Users, BarChart3, Globe, Zap, Target, Lightbulb, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
     const services = [
         {
-            icon: TrendingUp,
-            title: 'Strategy & Growth',
-            tagline: 'From vision to value creation',
-            description: 'We help leaders navigate complexity and capitalize on opportunity. Our strategy practice combines rigorous analysis with creative problem-solving to chart paths that accelerate growth and build lasting competitive advantage.',
-            capabilities: ['Corporate Strategy', 'M&A Advisory', 'Market Entry', 'Business Model Innovation', 'Portfolio Optimization']
+            id: 'core-business-operations',
+            title: 'Core Business Operations',
+            headline: 'Optimizing the heart of your organization.',
+            summary: 'Every business thrives on efficient operations. Our Core Business Operations team partners with clients to streamline processes, improve resource utilization, and elevate performance across all levels.',
+            focusAreas: [
+                'Process design and optimization',
+                'Operating model transformation',
+                'Performance measurement and accountability',
+                'Cost efficiency and resource alignment',
+                'Continuous improvement systems'
+            ],
+            image: '/images/operations-abstract.png'
         },
         {
-            icon: Cpu,
-            title: 'Technology & Data',
-            tagline: 'Intelligent systems for the modern enterprise',
-            description: 'Technology is no longer just infrastructure—it\'s the engine of transformation. We architect and implement solutions that turn data into decisions and platforms into competitive moats.',
-            capabilities: ['Digital Transformation', 'AI & Machine Learning', 'Cloud Architecture', 'Data Strategy', 'Cybersecurity']
+            id: 'enterprise-technology',
+            title: 'Enterprise Technology & Performance',
+            headline: 'Harnessing innovation to accelerate growth.',
+            summary: 'Technology should empower performance — not limit it. We help organizations integrate digital tools, data systems, and automation to drive smarter decision-making and measurable outcomes.',
+            focusAreas: [
+                'AI and automation strategy',
+                'Technology enablement and integration',
+                'Data management and analytics',
+                'Digital transformation programs',
+                'Enterprise performance management'
+            ],
+            image: '/images/technology-abstract.png'
         },
         {
-            icon: Users,
-            title: 'Human Capital',
-            tagline: 'Unlock the potential of your people',
-            description: 'Organizations succeed when their people do. We design talent strategies, leadership programs, and cultures that attract, develop, and retain the capabilities you need.',
-            capabilities: ['Talent Strategy', 'Organization Design', 'Leadership Development', 'Culture Transformation', 'Change Management']
+            id: 'human-capital',
+            title: 'Human Capital Consulting',
+            headline: 'Empowering your most valuable asset.',
+            summary: 'Growth starts with people. We help organizations design teams, cultures, and leadership frameworks that drive results.',
+            focusAreas: [
+                'Organizational design',
+                'Talent strategy and workforce planning',
+                'Leadership and capability development',
+                'Employee engagement and culture transformation',
+                'Change management and communications'
+            ],
+            image: '/images/about-abstract.png'
         },
         {
-            icon: BarChart3,
-            title: 'Operations Excellence',
-            tagline: 'Optimize across the value chain',
-            description: 'Operational excellence is the foundation of sustainable performance. We help clients streamline processes, reduce costs, and build resilient supply chains.',
-            capabilities: ['Process Optimization', 'Supply Chain', 'Procurement', 'Shared Services', 'Performance Management']
+            id: 'strategy-analytics',
+            title: 'Strategy & Analytics',
+            headline: 'Turning insight into strategic advantage.',
+            summary: 'Data and strategy work best when they inform each other. We help organizations translate insight into action — building decision frameworks, performance dashboards, and analytics models that reveal opportunities and guide smart investments.',
+            focusAreas: [
+                'Strategic planning and roadmap development',
+                'Business intelligence and data visualization',
+                'Performance analytics and reporting',
+                'Market and competitive analysis',
+                'Growth and investment strategy'
+            ],
+            image: '/images/strategy-abstract.png'
         },
         {
-            icon: Globe,
-            title: 'Sustainability',
-            tagline: 'Build responsible, resilient enterprises',
-            description: 'Sustainability is a strategic imperative. We help clients integrate ESG into core strategy, measure impact, and build businesses that thrive across generations.',
-            capabilities: ['ESG Strategy', 'Carbon Reduction', 'Sustainable Finance', 'Circular Economy', 'Reporting & Disclosure']
-        },
-        {
-            icon: Zap,
-            title: 'Innovation & Ventures',
-            tagline: 'Accelerate breakthrough ideas to market',
-            description: 'Innovation requires more than ideas—it demands execution. We help clients build innovation capabilities, launch ventures, and partner with the startup ecosystem.',
-            capabilities: ['Innovation Labs', 'Corporate Venturing', 'Startup Partnerships', 'R&D Strategy', 'Product Development']
-        },
-    ];
-
-    const approach = [
-        { icon: Target, title: 'Outcomes First', desc: 'Every engagement starts with the end in mind. We define success metrics upfront and hold ourselves accountable.' },
-        { icon: Lightbulb, title: 'Insight Driven', desc: 'We combine proprietary research, data analytics, and deep industry expertise to surface insights others miss.' },
-        { icon: Shield, title: 'Execution Ready', desc: 'Strategy without implementation is just a deck. We stay to help you execute and capture full value.' },
+            id: 'customer-market',
+            title: 'Customer & Market Strategy',
+            headline: 'Building lasting connections that drive growth.',
+            summary: 'We help clients understand, attract, and retain the customers that matter most. From brand positioning to digital engagement, our customer and marketing services combine creativity and analytics to create stronger connections and sustainable results.',
+            focusAreas: [
+                'Brand and market positioning',
+                'Customer journey design',
+                'Digital marketing and lifecycle engagement',
+                'Sales enablement and transformation',
+                'Product innovation and customer insights'
+            ],
+            image: '/images/innovation-abstract.png'
+        }
     ];
 
     return (
@@ -59,57 +81,40 @@ const Services = () => {
             {/* Hero */}
             <section className="page-hero">
                 <div className="container">
-                    <span className="overline">Our Services</span>
-                    <h1 className="text-balance">Integrated Solutions for Complex Challenges</h1>
+                    <h1 className="text-balance">Our Services</h1>
+                    <p className="hero-tagline">
+                        <em>Strategy, Operations, Technology, and Human Insight — Working Together to Drive Meaningful Progress</em>
+                    </p>
                     <p className="hero-subtitle text-lg">
-                        We bring together strategy, technology, operations, and human capital expertise to drive transformation at scale.
+                        At Prospique, we help organizations strengthen their foundations, align their teams, and scale with purpose. Our services are designed to meet organizations wherever they are — from start-up and small business to enterprise — delivering practical, high-impact solutions that connect strategy to execution.
+                    </p>
+                    <p className="hero-text">
+                        We combine strategic thinking, operational excellence, and intelligent use of technology to create measurable, lasting progress.
                     </p>
                 </div>
             </section>
 
-            {/* Approach */}
-            <section className="section approach-section">
-                <div className="container">
-                    <div className="grid grid-3">
-                        {approach.map((item, i) => (
-                            <div key={i} className="approach-item">
-                                <div className="approach-icon">
-                                    <item.icon size={24} strokeWidth={1.5} />
-                                </div>
-                                <h3>{item.title}</h3>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Services Detail */}
-            <section className="section-lg services-detail">
+            {/* Services */}
+            <section className="section-lg services-list-section">
                 <div className="container">
                     {services.map((service, i) => (
-                        <div key={i} className="service-block">
-                            <div className="service-header">
-                                <div className="service-icon-lg">
-                                    <service.icon size={32} strokeWidth={1.5} />
-                                </div>
-                                <div className="service-intro">
-                                    <span className="overline">{service.tagline}</span>
-                                    <h2>{service.title}</h2>
-                                </div>
+                        <div key={i} id={service.id} className="service-block">
+                            <div className="service-visual">
+                                <img src={service.image} alt={service.title} />
                             </div>
                             <div className="service-content">
-                                <p className="service-desc">{service.description}</p>
-                                <div className="capabilities">
-                                    <h4>Key Capabilities</h4>
-                                    <ul className="capability-list">
-                                        {service.capabilities.map((cap, j) => (
-                                            <li key={j}>{cap}</li>
+                                <h2>{service.title}</h2>
+                                <p className="service-headline">{service.headline}</p>
+                                <p className="service-summary">{service.summary}</p>
+                                <div className="focus-areas">
+                                    <h4>Focus Areas:</h4>
+                                    <ul>
+                                        {service.focusAreas.map((area, j) => (
+                                            <li key={j}>{area}</li>
                                         ))}
                                     </ul>
                                 </div>
                             </div>
-                            {i < services.length - 1 && <hr className="divider" />}
                         </div>
                     ))}
                 </div>
@@ -119,11 +124,13 @@ const Services = () => {
             <section className="section-lg cta-section">
                 <div className="container">
                     <div className="cta-block">
-                        <h2>Let's solve what matters</h2>
-                        <p className="text-lg">Tell us about your challenge. We'll bring the right team.</p>
-                        <Link to="/contact" className="btn btn-primary btn-lg">
-                            Start a Conversation <ArrowRight size={18} />
-                        </Link>
+                        <div className="cta-content">
+                            <h2>Ready to Get Started?</h2>
+                            <p className="text-lg">Let's discuss how our services can help your organization achieve meaningful progress.</p>
+                            <Link to="/contact" className="btn btn-primary btn-lg">
+                                Let's Talk <ArrowRight size={18} />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
