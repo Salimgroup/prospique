@@ -61,16 +61,21 @@ const Home = () => {
                     <div className="section-header">
                         <h2>Trusted Partners in Strategy, Transformation, and Growth</h2>
                     </div>
-                    <div className="who-content">
-                        <p className="text-lg">
-                            Prospique is a consulting firm helping organizations navigate change, improve performance, and scale with purpose. Our consultants bring deep expertise across industries—from professional services and technology to healthcare, education, and the public sector—combining strategic insight, operational excellence, and technological innovation.
-                        </p>
-                        <p>
-                            We connect people, processes, and data to build stronger organizations that can adapt, evolve, and thrive.
-                        </p>
-                        <Link to="/about" className="btn btn-outline">
-                            Learn More About Prospique
-                        </Link>
+                    <div className="who-grid">
+                        <div className="who-content">
+                            <p className="text-lg">
+                                Prospique is a consulting firm helping organizations navigate change, improve performance, and scale with purpose. Our consultants bring deep expertise across industries—from professional services and technology to healthcare, education, and the public sector—combining strategic insight, operational excellence, and technological innovation.
+                            </p>
+                            <p>
+                                We connect people, processes, and data to build stronger organizations that can adapt, evolve, and thrive.
+                            </p>
+                            <Link to="/about" className="btn btn-outline">
+                                Learn More About Prospique
+                            </Link>
+                        </div>
+                        <div className="who-visual">
+                            <img src="/images/office-meeting.png" alt="Strategy meeting" className="office-img" />
+                        </div>
                     </div>
                 </div>
             </section>
