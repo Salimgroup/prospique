@@ -80,11 +80,35 @@
 /* === WHO SECTION === */
 .about-page .who-section {
     background: var(--color-gray-900);
+    position: relative;
+}
+
+.about-page .who-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/topography.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 /* === MISSION === */
 .mission-section {
     background: var(--color-black);
+    position: relative;
+}
+
+.mission-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/topography.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .mission-block {

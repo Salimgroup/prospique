@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .topo-line { fill: none; stroke-width: 1; stroke-linecap: round; }
+      .dark-line { stroke: rgba(0,0,0,0.06); }
+    </style>
+  </defs>
+  
+  <!-- Abstract topographic contour lines - dark version for light sections -->
+  <g class="topo-line dark-line">
+    <path d="M-50,100 Q150,50 300,120 T600,80 T900,150" />
+    <path d="M-50,140 Q180,90 320,160 T620,120 T900,190" />
+    <path d="M-50,180 Q160,130 340,200 T640,160 T900,230" />
+    <path d="M-50,220 Q200,170 360,240 T660,200 T900,270" />
+    <path d="M-50,260 Q180,210 380,280 T680,240 T900,310" />
+    
+    <path d="M-50,320 Q220,270 400,340 T700,300 T900,370" />
+    <path d="M-50,360 Q200,310 420,380 T720,340 T900,410" />
+    <path d="M-50,400 Q240,350 440,420 T740,380 T900,450" />
+    <path d="M-50,440 Q220,390 460,460 T760,420 T900,490" />
+    <path d="M-50,480 Q260,430 480,500 T780,460 T900,530" />
+    
+    <path d="M-50,540 Q240,490 500,560 T800,520 T900,590" />
+    <path d="M-50,580 Q280,530 520,600 T820,560 T900,630" />
+    <path d="M-50,620 Q260,570 540,640 T840,600 T900,670" />
+  </g>
+  
+  <!-- Additional wave sets for depth -->
+  <g class="topo-line dark-line" transform="translate(0,20)">
+    <path d="M900,100 Q750,60 550,130 T250,90 T-50,160" />
+    <path d="M900,160 Q720,120 520,190 T220,150 T-50,220" />
+    <path d="M900,220 Q740,180 490,250 T190,210 T-50,280" />
+    <path d="M900,280 Q710,240 460,310 T160,270 T-50,340" />
+    <path d="M900,340 Q730,300 430,370 T130,330 T-50,400" />
+  </g>
+</svg>
